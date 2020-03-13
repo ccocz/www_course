@@ -41,9 +41,9 @@ table {
 #praise {
     background-color: crimson;
     width: 200px;
-    left: 586px;
+    left: 590px;
     position: absolute;
-    top: 141px;
+    top: 256px;
     font-size: 11px;
 }
 
@@ -69,14 +69,24 @@ th,td {
     padding: 6px;
 }
 
-#gdansk {
+#poster {
     display: inline;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 500px;
 }
 
-#la {
+#weather {
     display: inline;
-    height: 200px;
-    width: 200px;
+    height: 340px;
+    width: 500px;
+}
+
+#plane {
+    display: inline;
+    height: 400px;
+    width: 600px;
+}
+
+#list {
+    display: inline-block;
 }
