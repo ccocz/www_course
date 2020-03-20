@@ -94,3 +94,7 @@ th,td {
 #home {
     display: block;
 }
+
+p.from_where, p.flight_time, p.passenger_no {
+    font-size: large;
+}
