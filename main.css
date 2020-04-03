@@ -120,11 +120,6 @@ p.from_where, p.flight_time, p.passenger_no {
     font-weight: bold;
 }
 
-.main {
-    display: flex;
-    justify-content: space-around;
-}
-
 #register {
     margin-top: 20px;
 }
@@ -140,33 +135,6 @@ p.from_where, p.flight_time, p.passenger_no {
     width: 150px;
 }
 
-@media screen and (max-width:360px) {
-    .main {
-        flex-direction: column;
-    }
-    #weather {
-        display: none;
-    }
-    #poster {
-        display: none;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .main {
-        flex-wrap: wrap;
-    }
-    .flex-item:not(:first-child) {
-        flex: 1;
-    }     
-    .flex-item:nth-child(1) {
-        width: 100%;
-    }
-    .flex-item {
-        margin: 10px;
-    }
-}
-
 .place {
     display: none;
 }
@@ -175,6 +143,53 @@ p.from_where, p.flight_time, p.passenger_no {
     display: initial;
 }
 
-.grid {
+header { grid-area: header; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+.grid1 { grid-area: grid1; }
+.grid2 { grid-area: grid2; }
+.grid3 { grid-area: grid3; }
+
+.grid1 {
+    width: 200px;
+}
+
+.parent-grid {
     display: grid;
+    grid-template-areas:
+        "header header header"
+        "grid1 grid2 grid3"
+        "footer footer footer";
+    grid-gap: 15px;
+}
+
+
+@media screen and (min-width:360px) and (max-width:400px) {
+    .parent-grid {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "grid1"
+            "grid2"
+            "grid3"
+            "footer";
+        grid-gap: 15px;
+    }
+    #weather {
+        display: none;
+    }
+    #poster {
+        display: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width:800px) {
+    .parent-grid {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "grid1 grid1"
+            "grid2 grid3"
+            "footer footer";
+        grid-gap: 15px;
+    }
 }
