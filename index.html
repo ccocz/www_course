@@ -9,35 +9,121 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <header>
-        <h1>List of flights</h1>
-        <img src="logo.png" alt="firm_logo">
-    </header>
-    <main>
-        <p id="pierwszy">pierwszy</p>
-        <p id="drugi">drugi</p>
-        <p id="praise">awesome</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>flight no</th>
-                    <th>from</th>
-                    <th>to</th>
-                    <th>date</th>
-                    <th>time</th>
-                </tr>
-            </thead>
-            <tr>
-                <td><a href="flight.html">KL 445</a></td>
-                <td>los angeles</td>
-                <td>gdansk</td>
-                <td>1 March</td>
-                <td>07:30</td>
-            </tr>
-        </table>
-    </main>
-    <footer>
-        powered by <a href="kdlcw0f0ouj41.png">X</a>
-    </footer>
+    <div>
+        <header>
+            <h1>Starbucks</h1>
+            <img src="logo.png" alt="firm_logo">
+        </header>
+        <main>
+            <div class="main">
+                <div class="flex-item">
+                    <nav>
+                        <ul id="navi">
+                            <li><a href="flight.html">KL 445</a></li>
+                            <li><a href="">Discover</a></li>
+                            <li><a href="">Fly different</a></li>
+                            <li><a href="">Smiles and miles</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex-item">
+                    <p id="pierwszy">List of flights</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>flight no</th>
+                                <th>from</th>
+                                <th>to</th>
+                                <th>date</th>
+                                <th>time</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><a href="flight.html">KL 445</a></td>
+                            <td>los angeles</td>
+                            <td>gdansk</td>
+                            <td>1 March</td>
+                            <td>07:30</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="flex-item">
+                    <p id="drugi">Cancelled/delayed flights</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>flight no</th>
+                                <th>from</th>
+                                <th>to</th>
+                                <th>date</th>
+                                <th>status</th>
+                            </tr>
+                        </thead>
+                        <tr class="cancelled">
+                            <td>ek8210</td>
+                            <td>moscow</td>
+                            <td>denver</td>
+                            <td>2 April</td>
+                            <td>cancelled</td>
+                        </tr>
+                        <tr class="delayshort">
+                            <td>xc1233</td>
+                            <td>tokyo</td>
+                            <td>vietnam</td>
+                            <td>3 April</td>
+                            <td>delayed by 15 min</td>
+                        </tr>
+                        <tr class="delaylong">
+                            <td>ab31231</td>
+                            <td>warsaw</td>
+                            <td>katowice</td>
+                            <td>2 April</td>
+                            <td>delayed by 12 hours</td>
+                        </tr>
+                    </table>
+                    <div class="form">
+                        <form action="" method="POST" id="register">
+                            <label>
+                                <span>From:</span>
+                                <select>
+                                    <option>gdansk</option>
+                                    <option>wroclaw</option>
+                                    <option>poznan</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>To:</span>
+                                <select>
+                                    <option>gdansk</option>
+                                    <option selected>wroclaw</option>
+                                    <option>poznan</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>Name:</span>
+                                <input type="text">
+                            </label>
+                            <label>
+                                <span>Surname:</span>
+                                <input type="text">
+                            </label>
+                            <label>
+                                <span>Date:</span>
+                                <input type="date">
+                            </label>
+                            <label>
+                                <input type="reset">
+                                <input type="submit">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            powered by <a href="kdlcw0f0ouj41.png">X</a>
+        </footer>
 </body>
 </html>

@@ -53,14 +53,6 @@ img {
     width: 60px;
 }
 
-a {
-    color: black;
-}
-
-a:hover {
-    color: crimson;
-}
-
 table, th, td {
     border: 1px solid black
 }
@@ -97,4 +89,92 @@ th,td {
 
 p.from_where, p.flight_time, p.passenger_no {
     font-size: large;
+}
+
+#navi{
+    list-style: none;
+    font-family: monospace;
+}
+
+.menu a:link, a:visited{
+    color: crimson;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cancelled {
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+}
+
+.delaylong {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+.delayshort {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#register {
+    margin-top: 20px;
+}
+
+#register label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#register label > span {
+    float: left;
+    width: 150px;
+}
+
+@media screen and (max-width:360px) {
+    .main {
+        flex-direction: column;
+    }
+    #weather {
+        display: none;
+    }
+    #poster {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .main {
+        flex-wrap: wrap;
+    }
+    .flex-item:not(:first-child) {
+        flex: 1;
+    }     
+    .flex-item:nth-child(1) {
+        width: 100%;
+    }
+    .flex-item {
+        margin: 10px;
+    }
+}
+
+.place {
+    display: none;
+}
+
+.passenger:hover .place{
+    display: initial;
+}
+
+.grid {
+    display: grid;
 }
