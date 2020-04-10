@@ -35,7 +35,6 @@ table {
     text-align: center;
     margin-left: 12.5%;
     margin-right: 12.5%;
-    position: relative;
 }
 
 #praise {
@@ -61,13 +60,13 @@ th,td {
     padding: 6px;
 }
 
-#poster {
+.poster {
     display: inline;
     height: 300px;
     width: 500px;
 }
 
-#weather {
+.weather {
     display: inline;
     height: 340px;
     width: 500px;
@@ -83,6 +82,10 @@ th,td {
     display: inline-block;
 }
 
+.passenger:nth-child(odd) {
+    color: chocolate;
+}
+
 #home {
     display: block;
 }
@@ -91,12 +94,13 @@ p.from_where, p.flight_time, p.passenger_no {
     font-size: large;
 }
 
-#navi{
+.navi{
     list-style: none;
     font-family: monospace;
+    text-align: left;
 }
 
-.menu a:link, a:visited{
+.navi a:link, a:visited{
     color: crimson;
     text-decoration: none;
     text-transform: uppercase;
@@ -140,7 +144,9 @@ p.from_where, p.flight_time, p.passenger_no {
 }
 
 .passenger:hover .place{
-    display: initial;
+    display: inline;
+    position: absolute;
+    margin-left: 10px;
 }
 
 header { grid-area: header; }
@@ -150,21 +156,18 @@ footer { grid-area: footer; }
 .grid2 { grid-area: grid2; }
 .grid3 { grid-area: grid3; }
 
-.grid1 {
-    width: 200px;
-}
-
 .parent-grid {
     display: grid;
     grid-template-areas:
         "header header header"
         "grid1 grid2 grid3"
         "footer footer footer";
-    grid-gap: 15px;
+    grid-column-gap: 10px;
+    grid-template-columns: 200px;
 }
 
 
-@media screen and (min-width:360px) and (max-width:400px) {
+@media screen and (max-width:480px) {
     .parent-grid {
         display: grid;
         grid-template-areas:
@@ -175,15 +178,15 @@ footer { grid-area: footer; }
             "footer";
         grid-gap: 15px;
     }
-    #weather {
+    .weather {
         display: none;
     }
-    #poster {
+    .poster {
         display: none;
     }
 }
 
-@media screen and (min-width:768px) and (max-width:800px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
     .parent-grid {
         display: grid;
         grid-template-areas:
@@ -200,10 +203,10 @@ footer { grid-area: footer; }
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2% 10%;
+    margin: 2% 3%;
     padding: 10%;
-    width: 60%;
-    height: 60%;
+    width: 75%;
+    height: 50%;
     background-color: rgb(176, 220, 255);
     opacity: 0.9;
     text-transform: uppercase;

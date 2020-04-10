@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +11,24 @@
 <body>
     <div class="parent-grid">
         <header>
-            <h1>Starbucks</h1>
+            <h1>Starbucks<sup>®</sup></h1>
             <img src="logo.png" alt="firm_logo">
         </header>
         <div class="grid1">
             <nav>
-                <ul id="navi">
+                <ul class="navi">
                     <li><a href="flight.html">KL 445</a></li>
-                    <li><a href="">Discover</a></li>
+                    <li>
+                        <a href="">Discover</a>
+                        <ul class="navi">
+                            <li>
+                                <a href="">World</a>
+                            </li>
+                            <li>
+                                <a href="">MIM</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="">Fly different</a></li>
                     <li><a href="">Smiles and miles</a></li>
                     <li><a href="">About</a></li>
@@ -45,6 +55,21 @@
                     <td>1 March</td>
                     <td>07:30</td>
                 </tr>
+                <tr>
+                    <td><a href="flight.html">KL 445</a></td>
+                    <td>los angeles</td>
+                    <td>gdansk</td>
+                    <td>1 March</td>
+                    <td>07:30</td>
+                </tr>
+                <tr>
+                    <td><a href="flight.html">KL 445</a></td>
+                    <td>los angeles</td>
+                    <td>gdansk</td>
+                    <td>1 March</td>
+                    <td>07:30</td>
+                </tr>
+                
             </table>
         </div>
         <div class="grid3">
@@ -82,7 +107,7 @@
                 </tr>
             </table>
             <div class="form">
-                <form action="" method="POST" id="register">
+                <form method="POST" id="register">
                     <label>
                         <span>From:</span>
                         <select>
@@ -113,6 +138,8 @@
                     </label>
                     <label>
                         <input type="reset">
+                    </label>
+                    <label>
                         <input type="submit">
                     </label>
                 </form>
