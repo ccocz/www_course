@@ -22,7 +22,6 @@ table {
 }
 
 #pierwszy {
-    background-color: moccasin;
     width: 75%;
     text-align: center;
     margin-left: 12.5%;
@@ -30,7 +29,6 @@ table {
 }
 
 #drugi {
-    background-color: darkkhaki;
     width: 75%;
     text-align: center;
     margin-left: 12.5%;
@@ -124,10 +122,6 @@ p.from_where, p.flight_time, p.passenger_no {
     font-weight: bold;
 }
 
-#register {
-    margin-top: 20px;
-}
-
 #register label {
     display: block;
     text-align: left;
@@ -154,20 +148,28 @@ main { grid-area: main; }
 footer { grid-area: footer; }
 .grid1 { grid-area: grid1; }
 .grid2 { grid-area: grid2; }
-.grid3 { grid-area: grid3; }
+.grid3 { 
+    grid-area: grid3;
+}
+
+.grid4 {
+    grid-area: grid4;
+    align-self: end;
+}
 
 .parent-grid {
     display: grid;
     grid-template-areas:
         "header header header"
         "grid1 grid2 grid3"
+        "grid1 grid2 grid4"
         "footer footer footer";
     grid-column-gap: 10px;
-    grid-template-columns: 200px;
+    grid-template-columns: 200px 810px 270px;
 }
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:767px) {
     .parent-grid {
         display: grid;
         grid-template-areas:
@@ -175,6 +177,7 @@ footer { grid-area: footer; }
             "grid1"
             "grid2"
             "grid3"
+            "grid4"
             "footer";
         grid-gap: 15px;
     }
@@ -193,8 +196,10 @@ footer { grid-area: footer; }
             "header header"
             "grid1 grid1"
             "grid2 grid3"
+            "grid2 grid4"
             "footer footer";
         grid-gap: 15px;
+        grid-template-columns: 1fr 2fr;
     }
 }
 
@@ -203,14 +208,21 @@ footer { grid-area: footer; }
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2% 2%;
-    padding: 10%;
-    width: 75%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+    padding-top: 25%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgb(176, 220, 255);
     opacity: 0.9;
     text-transform: uppercase;
     font-size: 22px;
     font-family: arial, sans-serif;
     color: rgb(5, 5, 124);
+}
+
+#delay_table {
+    font-size: 10px;
 }
